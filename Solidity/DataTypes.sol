@@ -3,9 +3,9 @@ pragma solidity ^0.8.0;
 
 //basic Data Types
 contract Example{
-    uint a;
-    int b;
-    bool c;
+    uint a;  //storage slot-0x0
+    int b;   //storage slot-0x1
+    bool c;  //storage slot-0x2
 
     enum Choice{Up,Down,Right,Left}
     Choice choice=Choice.Up;
@@ -23,14 +23,17 @@ contract Int{
 //Booleans
 contract Boolean{
     //either True or False
+    // Default value is False
 
 }
 
 //Enums
 contract Enums{
-    enum Choice{Up,Down,Left,Right}
-    constructor(Choice choice){
-        if(choice==Choice.Up){
-        }
-    }
+
+     enum Foods { Apple, Pizza, Bagel, Banana }
+        Foods public food1 = Foods.Apple;
+        Foods public food2 = Foods.Pizza;
+        Foods public food3 = Foods.Bagel;
+        Foods public food4 = Foods.Banana;
+    
 }
