@@ -71,3 +71,19 @@ contract exampletest{
         assertEq(address(b).balance, 1 ether);
     }
 }
+
+
+//example 2
+contract ex2{
+    address owner;
+    constructor() payable{
+        owner=msg.sender;
+        require(mag.value >=1 ether,"optional error message");
+        
+    }
+    function Ownerpayable() public payable{
+        require(owner==msg.sender);
+        payable(msg.sender).transfer(address(this).balance);
+            
+    }
+}
